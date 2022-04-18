@@ -1,0 +1,1627 @@
+/*Start Header*/
+
+header .contain {
+    background-color: var(--white);
+    position: relative;
+    border-bottom: 1px solid var(--black);
+    z-index: 999;
+}
+
+header .contain .links {
+    gap: 20px;
+}
+
+header .contain .links .link {
+    font-size: 20px;
+    transition: var(--tran);
+    position: relative;
+}
+
+header .contain .links .btns {
+    gap: 10px;
+}
+
+header .contain .links .btns button {
+    padding: 8px 15px;
+    font-size: 18px;
+    transition: var(--tran);
+    background-color: transparent;
+    position: relative;
+}
+
+header .contain .links .btns a:first-child button {
+    color: var(--black);
+}
+
+header .contain .links .btns a:first-child button::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 0;
+    background-color: var(--orange);
+    transition: var(--tran);
+    z-index: -1;
+}
+
+header .contain .links .btns a:first-child button:hover {
+    color: var(--white);
+    cursor: pointer;
+}
+
+header .contain .links .btns a:first-child button:hover::after {
+    height: 100%;
+    width: 100%;
+}
+
+header .contain .links .btns a:last-child button {
+    color: var(--white);
+}
+
+header .contain .links .btns a:last-child button::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--orange);
+    transition: var(--tran);
+    z-index: -1;
+}
+
+header .contain .links .btns a:last-child button:hover {
+    color: var(--black);
+    cursor: pointer;
+}
+
+header .contain .links .btns a:last-child button:hover::after {
+    height: 0%;
+    width: 100%;
+}
+
+header .contain .links .link a {
+    color: var(--black);
+}
+
+header .contain .user {
+    padding: 5px;
+    border: 2px solid var(--orange);
+    gap: 5px;
+}
+
+header .contain .user img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+header .contain .links .link::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: -5px;
+    height: 3px;
+    width: 0;
+    background-color: var(--orange);
+    transition: var(--tran);
+}
+
+header .contain .links .link:hover::after {
+    left: 0;
+    right: auto;
+    width: 100%;
+}
+
+header .contain .logo {
+    height: 100px;
+    gap: 10px;
+    font-weight: var(--fontw700);
+}
+
+header .contain .logo .icon img {
+    width: 80px;
+}
+
+header .contain .logo span.name {
+    font-size: 25px;
+}
+
+header .contain>.icon {
+    display: none;
+}
+
+.show-links {
+    opacity: 1 !important;
+    visibility: visible !important;
+    z-index: 99;
+}
+
+@media (max-width:992px) {
+    header .contain .logo {
+        height: 90px;
+    }
+    header .contain .logo .icon img {
+        width: 70px;
+    }
+    header .contain .logo span.name {
+        font-size: 22px;
+    }
+    header .contain .links {
+        position: absolute;
+        transition: var(--tran);
+        right: 0;
+        top: 100%;
+        background-color: var(--white);
+        display: grid;
+        justify-content: center;
+        width: 30%;
+        border: 2px solid var(--orange);
+        gap: 20px;
+        padding: 20px;
+        opacity: 0;
+        visibility: hidden;
+        z-index: -99;
+        height: fit-content;
+    }
+    header .contain .links .link {
+        width: fit-content;
+        text-align: center;
+        left: 50%;
+        position: relative;
+        transform: translateX(-50%);
+    }
+    header .contain .links .link::after {
+        bottom: 0px;
+    }
+    header .contain .icon {
+        display: flex;
+    }
+    header .contain .icon i {
+        font-size: 25px;
+        transition: var(--tran);
+        color: var(--black);
+    }
+    header .contain .icon i:hover {
+        color: var(--orange);
+        cursor: pointer;
+    }
+    header .contain .links .btns button {
+        padding: 6px 12px;
+        font-size: 16px;
+    }
+}
+
+@media (max-width:768px) {
+    header .contain .links {
+        width: 40%;
+    }
+    header .contain .logo {
+        height: 80px;
+    }
+    header .contain .logo .icon img {
+        width: 60px;
+    }
+    header .contain .logo span.name {
+        font-size: 20px;
+    }
+    header .contain .links .btns {
+        display: grid;
+        justify-content: center;
+    }
+    header .contain .links .btns button {
+        padding: 4px 10px;
+        font-size: 16px;
+    }
+}
+
+
+/*End Header*/
+
+
+/*Start Main Section*/
+
+.main-section .contain {
+    gap: 50px;
+    padding-top: var(--padd100);
+    padding-bottom: var(--padd100);
+    grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+}
+
+.main-section .contain menu {
+    gap: 50px
+}
+
+.main-section .contain menu h1 {
+    font-size: 60px;
+    color: var(--orange);
+    font-weight: var(--fontw700);
+}
+
+.main-section .contain menu p {
+    font-size: 20px;
+}
+
+.main-section .contain menu .btns button {
+    width: fit-content;
+}
+
+.main-section .contain picture img {
+    width: 100%;
+}
+
+@media (max-width:992px) {
+    .main-section .contain {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .main-section .contain menu {
+        gap: 40px;
+    }
+    .main-section .contain menu h1 {
+        font-size: 50px;
+    }
+    .main-section .contain menu p {
+        font-size: 18px;
+    }
+}
+
+@media (max-width:768px) {
+    .main-section .contain menu {
+        gap: 30px;
+        justify-content: center;
+        text-align: center;
+    }
+    .main-section .contain menu h1 {
+        font-size: 40px;
+    }
+    .main-section .contain menu p {
+        font-size: 16px;
+    }
+}
+
+
+/*End Main Section*/
+
+
+/*Start Course Home*/
+
+.course-home .contain {
+    padding-top: var(--padd100);
+    padding-bottom: var(--padd100);
+    gap: 50px;
+    justify-content: stretch;
+    background-image: url('../imgs/circle.svg');
+    background-repeat: no-repeat;
+    overflow: hidden;
+    background-size: cover;
+}
+
+.course-home .contain address h4 {
+    font-size: 28px;
+    color: var(--orange);
+}
+
+.course-home .contain address h2 {
+    color: var(--black);
+}
+
+.course-home .contain menu {
+    gap: 50px;
+    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+    position: relative;
+    z-index: 99;
+}
+
+.course-home .contain menu .box {
+    animation-name: motion;
+    animation-iteration-count: inherit;
+    animation-duration: .2s;
+    animation-fill-mode: both;
+    transition: var(--tran);
+    box-shadow: var(--box-shadow);
+    justify-content: stretch;
+    border: 1px solid transparent;
+    background-color: var(--white);
+}
+
+.course-home .contain menu .box:hover {
+    cursor: pointer;
+    border: 1px solid var(--black);
+}
+
+.course-home .contain menu .box>a {
+    justify-content: stretch;
+    gap: 0;
+    width: 100%;
+}
+
+.course-home .contain menu .box picture {
+    position: relative;
+}
+
+.course-home .contain menu .box picture img {
+    width: 100%;
+    height: 220px;
+}
+
+.course-home .contain menu .box picture .abs {
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    left: 20px;
+    z-index: 0;
+    bottom: -20px;
+    background-position: 50% 50%;
+}
+
+.course-home .contain menu .box .content {
+    background-color: var(--white);
+    padding: 20px;
+    gap: 20px;
+    justify-content: stretch;
+}
+
+.course-home .contain menu .content span.free {
+    color: var(--white);
+    padding: 0px 15px;
+    background-color: var(--orange);
+    width: fit-content;
+}
+
+.course-home .contain menu .box .content .info {
+    align-self: stretch;
+    gap: 80px;
+}
+
+.course-home .contain menu .box .content .info .part {
+    gap: 10px;
+}
+
+.course-home .contain menu .box .content .info .part h3 {
+    font-size: 25px;
+    color: var(--orange);
+}
+
+.course-home .contain menu .box .content .info .part p {
+    font-size: 18px;
+    color: var(--black);
+}
+
+.course-home .contain menu .box .content h4 {
+    font-size: 20px;
+    color: var(--black);
+}
+
+.course-home .contain>a {
+    color: var(--black);
+    transition: var(--tran);
+    z-index: 99;
+    font-weight: var(--fontw900);
+    text-align: center;
+    font-size: 20px;
+}
+
+.course-home .contain>a:hover {
+    color: var(--orange);
+    cursor: pointer;
+}
+
+.course-home .contain .slides {
+    gap: 10px;
+}
+
+.course-home .contain .slides span {
+    width: 18px;
+    height: 18px;
+    transition: var(--tran);
+    border-radius: 50%;
+    border: 1px solid var(--black);
+    background-color: transparent;
+}
+
+.course-home .contain .slides span:hover {
+    cursor: pointer;
+    background-color: var(--orange);
+    border: 1px solid var(--orange);
+}
+
+.course-home .contain .slides span.active {
+    background-color: var(--orange);
+    border: 1px solid var(--orange);
+    width: 10px;
+    height: 10px;
+}
+
+.course-home .contain .status {
+    display: none;
+}
+
+.hide-box {
+    position: absolute;
+    top: 0;
+    transform: translateX(500%);
+    opacity: 0;
+    z-index: -99;
+    animation-name: motion1;
+    animation-iteration-count: inherit;
+    animation-duration: .2s;
+    animation-fill-mode: both;
+}
+
+@keyframes motion {
+    0% {
+        transform: translateX(500%);
+    }
+    50% {
+        transform: translateX(250%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes motion1 {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(250%);
+    }
+    100% {
+        transform: translateX(500%);
+    }
+}
+
+@media (max-width:992px) {
+    .course-home .contain menu {
+        gap: 20px;
+    }
+}
+
+@media (max-width:768px) {
+    .course-home .contain {
+        gap: 50px;
+        justify-content: center;
+    }
+    .course-home .contain address {
+        text-align: center;
+    }
+    .course-home .contain address h4 {
+        font-size: 25px;
+    }
+    .course-home .contain a {
+        font-size: 20px;
+    }
+    .course-home .contain menu {
+        gap: 30px;
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .course-home .contain menu .box picture img {
+        height: 160px;
+    }
+    .course-home .contain menu .box picture .abs {
+        width: 80px;
+        height: 80px;
+        left: 20px;
+        bottom: -20px;
+    }
+    .course-home .contain menu .box .content {
+        padding: 20px;
+    }
+    .course-home .contain menu .content span.free {
+        padding: 0px 15px;
+        width: fit-content;
+    }
+    .course-home .contain menu .box .content .info {
+        gap: 50px;
+    }
+    .course-home .contain menu .box .content .info .part h3 {
+        font-size: 22px;
+    }
+    .course-home .contain menu .box .content .info .part p {
+        font-size: 16px;
+    }
+    .course-home .contain menu .box .content h4 {
+        font-size: 18px;
+    }
+}
+
+
+/*End Course Home*/
+
+
+/*Start Explore*/
+
+.explore .contain {
+    padding-top: var(--padd100);
+    padding-bottom: var(--padd100);
+    gap: 50px;
+    justify-content: stretch;
+}
+
+.explore .contain menu {
+    gap: 30px;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+}
+
+.explore .contain menu .box {
+    background-color: var(--white);
+    box-shadow: var(--box-shadow);
+    transition: var(--tran);
+    border-radius: 8px;
+    width: 100%;
+}
+
+.explore .contain menu .box:hover {
+    cursor: pointer;
+    transform: translateY(-5px);
+}
+
+.explore .contain menu .box a {
+    grid-template-columns: 30% 1fr;
+}
+
+.explore .contain menu .box a picture {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px 0 0 8px;
+    position: relative;
+}
+
+.explore .contain menu .box a picture .img {
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+    position: absolute;
+    width: 100%;
+    border-radius: 8px 0 0 8px;
+    height: 100%;
+}
+
+.explore .contain menu .box a .content {
+    padding: 15px;
+    gap: 5px;
+}
+
+.explore .contain menu .box a .content span {
+    text-transform: capitalize;
+    color: var(--black);
+    transition: var(--tran);
+}
+
+.explore .contain menu .box:hover a .content span.name {
+    color: var(--orange);
+}
+
+.explore .contain menu .box a .content span.name {
+    font-size: 20px;
+}
+
+.explore .contain menu .box a .content span.num {
+    font-size: 18px;
+}
+
+@media (max-width:992px) {
+    .explore .contain {
+        justify-content: stretch;
+    }
+    .explore .contain menu {
+        gap: 25px;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .explore .contain menu .box {
+        border-radius: 6px;
+    }
+    .explore .contain menu .box:hover {
+        transform: translateY(-2px);
+    }
+    .explore .contain menu .box a {
+        grid-template-columns: 35% 1fr;
+    }
+    .explore .contain menu .box a picture {
+        border-radius: 6px 0 0 6px;
+    }
+    .explore .contain menu .box a picture img {
+        border-radius: 6px 0 0 6px;
+    }
+    .explore .contain menu .box a .content {
+        padding: 15px;
+    }
+    .explore .contain menu .box a .content span.name {
+        font-size: 16px;
+    }
+    .explore .contain menu .box a .content span.num {
+        font-size: 15px;
+    }
+}
+
+@media (max-width:768px) {
+    .explore .contain {
+        justify-content: center;
+    }
+    .explore .contain menu {
+        gap: 20px;
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .explore .contain menu .box {
+        border-radius: 4px;
+    }
+    .explore .contain menu .box:hover {
+        transform: translateY(-2px);
+    }
+    .explore .contain menu .box a {
+        grid-template-columns: 40% 1fr;
+    }
+    .explore .contain menu .box a picture {
+        border-radius: 4px 0 0 4px;
+    }
+    .explore .contain menu .box a picture img {
+        border-radius: 4px 0 0 4px;
+    }
+    .explore .contain menu .box a .content {
+        padding: 10px;
+    }
+    .explore .contain menu .box a .content span.name {
+        font-size: 15px;
+    }
+    .explore .contain menu .box a .content span.num {
+        font-size: 12px;
+    }
+}
+
+
+/*End Explore*/
+
+
+/*Start Courses Page*/
+
+
+/*Start Courses Section*/
+
+.courses .contain {
+    gap: 50px;
+    padding-top: var(--padd100);
+    padding-bottom: var(--padd100);
+    grid-template-columns: repeat(1, 1fr);
+    justify-content: stretch;
+}
+
+.courses .contain .filter {
+    gap: 30px;
+    justify-content: stretch;
+}
+
+.courses .contain .filter p {
+    font-size: 25px;
+    color: var(--orange);
+    left: 25px;
+    position: relative;
+}
+
+.courses .contain .filter p::before {
+    content: '';
+    position: absolute;
+    left: -20px;
+    width: 10px;
+    background-color: var(--black);
+    height: 2px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.courses .contain .filter form {
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.courses .contain .filter form .check {
+    gap: 10px;
+}
+
+.courses .contain .filter form .check:hover {
+    cursor: pointer;
+}
+
+.courses .contain .filter form .check input {
+    width: 25px;
+    height: 25px;
+}
+
+.courses .contain .filter form .check input:hover {
+    cursor: pointer;
+}
+
+.courses .contain .filter form .check label {
+    font-weight: var(--fontw700);
+    font-size: 18px;
+    text-transform: capitalize;
+}
+
+.courses .contain menu {
+    gap: 30px;
+    justify-content: stretch
+}
+
+.courses .contain menu a {
+    position: relative;
+}
+
+.courses .contain menu a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: calc(100% + 15px);
+    background-color: #eee;
+    height: 1px;
+    width: 100%;
+    transition: var(--tran);
+}
+
+.courses .contain menu .box:hover::after {
+    background-color: #ddd;
+}
+
+.courses .contain menu .box a {
+    gap: 30px;
+}
+
+.courses .contain menu .box a picture img {
+    width: 270px;
+    height: 160px;
+    box-shadow: var(--box-shadow);
+}
+
+.courses .contain menu .box a .content {
+    align-self: stretch;
+    color: var(--black);
+}
+
+.courses .contain menu .box a .content h3 {
+    font-size: 30px;
+    color: var(--orange);
+}
+
+.courses .contain menu .box a .content p {
+    font-size: 18px;
+}
+
+.courses .contain menu .box a .content span.course {
+    background-color: #ddd;
+    width: fit-content;
+    padding: 0 10px;
+}
+
+.courses .contain menu .box a .content nav {
+    gap: 20px;
+}
+
+.courses .contain menu .box a .content nav span:first-child {
+    position: relative;
+    color: var(--orange);
+}
+
+.courses .contain menu .box a .content nav span:first-child::after {
+    content: '';
+    position: absolute;
+    left: calc(100% + 10px);
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #ccc;
+    height: 50%;
+    width: 1px;
+}
+
+@media (max-width:992px) {
+    .courses .contain {
+        justify-content: stretch;
+    }
+    .courses .contain .filter {
+        justify-content: stretch;
+    }
+    .courses .contain .filter p {
+        font-size: 22px;
+    }
+    .courses .contain .filter form .check input {
+        width: 22px;
+        height: 22px;
+    }
+    .courses .contain .filter form .check label {
+        font-size: 16px;
+    }
+    .courses .contain menu .box a {
+        gap: 30px;
+    }
+    .courses .contain menu .box a picture img {
+        width: 250px;
+        height: 150px;
+    }
+    .courses .contain menu .box a .content {
+        align-self: stretch;
+    }
+    .courses .contain menu .box a .content h3 {
+        font-size: 28px;
+    }
+    .courses .contain menu .box a .content p {
+        font-size: 18px;
+    }
+}
+
+@media (max-width:768px) {
+    .courses .contain {
+        justify-content: center;
+    }
+    .courses .contain address {
+        text-align: center;
+    }
+    .courses .contain .filter {
+        justify-content: center;
+    }
+    .courses .contain .filter p {
+        font-size: 20px;
+    }
+    .courses .contain .filter form .check input {
+        width: 20px;
+        height: 20px;
+    }
+    .courses .contain .filter form .check label {
+        font-size: 12px;
+    }
+    .courses .contain menu .box>a {
+        display: grid;
+        justify-content: stretch;
+        gap: 20px;
+    }
+    .courses .contain menu .box a picture img {
+        width: 230px;
+        height: 130px;
+    }
+    .courses .contain menu .box a .content {
+        align-self: center;
+    }
+    .courses .contain menu .box a .content h3 {
+        font-size: 25px;
+    }
+    .courses .contain menu .box a .content p {
+        font-size: 16px;
+    }
+}
+
+
+/*End Courses Section*/
+
+
+/*End Courses Page*/
+
+
+/*Start About*/
+
+.about-home .contain {
+    padding-top: var(--padd100);
+    padding-bottom: var(--padd100);
+    grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+    gap: 50px;
+}
+
+.about-home .contain menu {
+    gap: 50px;
+}
+
+.about-home .contain menu address {
+    gap: 40px;
+}
+
+.about-home .contain menu address h2::first-letter,
+.about-home .contain menu address h2 span {
+    color: var(--orange);
+}
+
+.about-home .contain picture img {
+    width: 100%;
+}
+
+@media (max-width:992px) {
+    .about-home .contain {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .about-home .contain menu {
+        gap: 30px;
+    }
+    .about-home .contain menu address {
+        gap: 30px;
+    }
+    .about-home .contain picture {
+        display: none;
+    }
+}
+
+@media (max-width:768px) {
+    .about-home .contain menu {
+        gap: 25px;
+        justify-content: center;
+        text-align: center;
+    }
+    .about-home .contain menu address {
+        gap: 25px;
+        justify-content: center;
+    }
+}
+
+
+/*End About*/
+
+
+/*Start About Page*/
+
+
+/*Start About*/
+
+.members .contain {
+    padding-top: var(--padd100);
+    padding-bottom: var(--padd100);
+    gap: 50px;
+}
+
+.members .contain menu {
+    gap: 30px;
+}
+
+.members .contain menu picture img,
+.members .contain menu picture {
+    width: 400px;
+    height: 400px;
+    border-radius: 10px;
+    transition: var(--tran);
+}
+
+.members .contain menu picture img {
+    transform: rotate(2deg);
+    filter: grayscale(100%);
+}
+
+.members .contain menu picture img:hover {
+    filter: grayscale(0);
+    transform: rotate(0);
+}
+
+.members .contain menu .info {
+    gap: 30px;
+}
+
+.members .contain menu .info .data {
+    gap: 10;
+}
+
+.members .contain menu .info span.name {
+    font-size: 35px;
+    font-weight: var(--fontw700);
+}
+
+.members .contain menu .info span.country {
+    color: var(--orange);
+    font-size: 20px;
+    gap: 20px;
+}
+
+.members .contain menu .info span.country img {
+    width: 60px;
+    height: 60px;
+}
+
+.members .contain menu .info p {
+    font-size: 20px;
+}
+
+@media (max-width:992px) {
+    .members .contain menu {
+        gap: 30px;
+        display: grid;
+    }
+    .members .contain menu picture img,
+    .members .contain menu picture {
+        width: 350px;
+        height: 350px;
+        border-radius: 8px;
+    }
+    .members .contain menu .info {
+        gap: 30px;
+    }
+    .members .contain menu .info span.name {
+        font-size: 30px;
+    }
+    .members .contain menu .info span.country {
+        font-size: 18px;
+    }
+    .members .contain menu .info span.country img {
+        width: 55px;
+        height: 55px;
+    }
+    .members .contain menu .info p {
+        font-size: 18px;
+    }
+}
+
+@media (max-width:768px) {
+    .members .contain menu {
+        gap: 30px;
+        display: grid;
+        justify-content: center;
+    }
+    .members .contain menu picture img,
+    .members .contain menu picture {
+        width: 300px;
+        height: 300px;
+        border-radius: 8px;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%) rotate(2deg);
+    }
+    .members .contain menu picture img:hover {
+        transform: translateX(-50%) rotate(-2deg);
+    }
+    .members .contain menu .info {
+        gap: 20px;
+        justify-content: center;
+        text-align: center;
+    }
+    .members .contain menu .info span.name {
+        font-size: 25px;
+    }
+    .members .contain menu .info .data {
+        justify-content: center;
+        text-align: center;
+    }
+    .members .contain menu .info span.country img {
+        width: 50px;
+        height: 50px;
+    }
+    .members .contain menu .info p {
+        font-size: 16px;
+    }
+}
+
+
+/*End About*/
+
+
+/*End About Page*/
+
+
+/*Start Profile Page*/
+
+.profile>picture {
+    height: 80vh;
+    background-image: url('../imgs/backprofile.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    align-content: center;
+    gap: 20px;
+}
+
+.profile>picture img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+}
+
+.profile>picture span {
+    color: var(--white);
+    font-size: 30px;
+    text-align: center;
+}
+
+.profile .info-user {
+    width: 80%;
+    background-color: var(--white);
+    padding: 50px;
+    gap: 30px;
+    border-radius: 10px;
+    transform: translateY(-80px) translateX(-50%);
+    justify-content: stretch;
+}
+
+.profile .info-user>div span {
+    font-size: 25px;
+}
+
+.profile .info-user>div button {
+    width: fit-content;
+}
+
+.profile .pop-up {
+    width: 50%;
+    position: absolute;
+    background-color: var(--white);
+    padding: 50px;
+    border-radius: 6px;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.profile .pop-up>div {
+    font-size: 25px;
+    font-weight: var(--fontw700);
+}
+
+.profile .pop-up form {
+    gap: 20px;
+    justify-content: stretch;
+}
+
+.profile .pop-up .in {
+    gap: 10px;
+    justify-content: stretch;
+}
+
+.profile .pop-up .in input {
+    border: 1px solid #ccc;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.profile .pop-up .in input::placeholder {
+    font-size: 15px;
+}
+
+.profile .pop-up .in input:hover::placeholder {
+    transition: var(--tran);
+    opacity: 0;
+}
+
+.profile .pop-up .in label span:first-child {
+    gap: 5px;
+    font-size: 18px;
+}
+
+.profile .pop-up .in label span.eye {
+    transition: var(--tran);
+}
+
+.profile .pop-up .in label span.eye:hover {
+    color: var(--orange);
+}
+
+.profile .pop-up .in label span.eye:hover {
+    cursor: pointer;
+}
+
+.profile .change-avater .pop-up {
+    gap: 30px;
+    justify-content: stretch;
+    height: 80vh;
+    scroll-behavior: smooth;
+    overflow-y: scroll;
+}
+
+.profile>picture img:hover {
+    cursor: pointer;
+}
+
+.profile .change-avater .pop-up .pics {
+    gap: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    justify-content: stretch;
+}
+
+.profile .change-avater .pop-up .pics picture {
+    width: 150px;
+    height: 150px;
+}
+
+.profile .change-avater .pop-up .pics picture img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    transition: var(--tran);
+    border: 4px solid transparent;
+}
+
+.profile .change-avater .pop-up .pics picture img:hover {
+    border: 4px solid var(--orange);
+    cursor: pointer;
+    transform: scale(1.2);
+}
+
+.body-pop-up {
+    overflow: hidden !important;
+}
+
+@media (max-width:992px) {
+    .profile picture {
+        height: 70vh;
+        gap: 20px;
+    }
+    .profile picture img {
+        width: 250px;
+        height: 250px;
+    }
+    .profile picture span {
+        font-size: 25px;
+    }
+    .profile .info-user {
+        padding: 40px;
+        gap: 25px;
+        border-radius: 8px;
+        transform: translateY(-50px) translateX(-50%);
+        justify-content: stretch;
+    }
+    .profile .info-user>div span {
+        font-size: 20px;
+    }
+    .profile .info-user>div span:last-child {
+        font-size: 18px;
+    }
+    .profile .pop-up {
+        width: 60%;
+        padding: 40px;
+        border-radius: 5px;
+    }
+    .profile .pop-up>div {
+        font-size: 22px;
+    }
+    .profile .pop-up form {
+        gap: 20px;
+        justify-content: stretch;
+    }
+    .profile .pop-up .in {
+        justify-content: stretch;
+    }
+    .profile .pop-up .in input {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .profile .pop-up .in input::placeholder {
+        font-size: 15px;
+    }
+    .profile .pop-up .in label span:first-child,
+    .profile .pop-up .in label span:last-child {
+        font-size: 16px;
+    }
+    .profile .change-avater .pop-up {
+        gap: 25px;
+        justify-content: stretch;
+    }
+    .profile .change-avater .pop-up .pics {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        justify-content: stretch;
+    }
+    .profile .change-avater .pop-up .pics picture {
+        width: 140px;
+        height: 140px;
+    }
+}
+
+@media (max-width:768px) {
+    .profile picture {
+        height: 60vh;
+    }
+    .profile picture img {
+        width: 200px;
+        height: 200px;
+    }
+    .profile picture span {
+        font-size: 18px;
+    }
+    .profile .info-user {
+        width: 80%;
+        padding: 20px;
+        gap: 20px;
+        border-radius: 6px;
+        transform: translateY(-20px) translateX(-50%);
+    }
+    .profile .info-user>div span {
+        font-size: 18px;
+    }
+    .profile .info-user>div span:last-child {
+        font-size: 15px;
+    }
+    .profile .pop-up {
+        width: 70%;
+        padding: 30px;
+        border-radius: 4px;
+    }
+    .profile .pop-up>div {
+        font-size: 20px;
+    }
+    .profile .pop-up form {
+        justify-content: center;
+    }
+    .profile .pop-up .in {
+        justify-content: center;
+    }
+    .profile .pop-up .in input {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .profile .pop-up .in input::placeholder {
+        font-size: 12px;
+    }
+    .profile .pop-up .in label span:first-child,
+    .profile .pop-up .in label span:last-child {
+        font-size: 12px;
+    }
+    .profile .change-avater .pop-up {
+        gap: 20px;
+        justify-content: center;
+    }
+    .profile .change-avater .pop-up .pics {
+        grid-template-columns: repeat(1, 1fr);
+        justify-content: center;
+    }
+    .profile .change-avater .pop-up .pics picture {
+        width: 120px;
+        height: 120px;
+    }
+    .profile .change-avater .pop-up .pics picture img {
+        border: 2px solid transparent;
+    }
+    .profile .change-avater .pop-up .pics picture img:hover {
+        border: 2px solid var(--orange);
+        transform: scale(1.1);
+    }
+}
+
+
+/*End Profile Page*/
+
+
+/*Start Login and Sign up Page*/
+
+
+/*Start Section Login*/
+
+section.login .contain {
+    padding-top: var(--padd100);
+    padding-bottom: var(--padd100);
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px;
+}
+
+section.login .contain .icon img {
+    width: 300px;
+}
+
+section.login .contain form {
+    gap: 50px;
+    justify-content: stretch;
+}
+
+section.login .contain form>h3 {
+    font-size: 25px;
+    font-weight: var(--fontw700);
+    text-transform: capitalize;
+}
+
+section.login .contain form menu {
+    justify-content: stretch;
+}
+
+section.login .contain form menu.first {
+    gap: 20px;
+}
+
+section.login .contain form menu.first .in {
+    gap: 10px;
+    justify-content: stretch;
+}
+
+section.login .contain form menu.first .in input {
+    border: 1px solid #ccc;
+}
+
+section.login .contain form menu.first .in input::placeholder {
+    font-size: 15px;
+}
+
+section.login .contain form menu.first .in input:hover::placeholder {
+    transition: var(--tran);
+    opacity: 0;
+}
+
+section.login .contain form menu.first .in label span:first-child {
+    gap: 5px;
+    font-size: 18px;
+}
+
+section.login .contain form menu.first .in label span.eye {
+    transition: var(--tran);
+}
+
+section.login .contain form menu.first .in label span.eye:hover {
+    color: var(--orange);
+}
+
+section.login .contain form menu.first .in label span.eye:hover {
+    cursor: pointer;
+}
+
+section.login .contain form menu.second {
+    gap: 10px;
+}
+
+section.login .contain form menu.second .check {
+    gap: 5px;
+}
+
+section.login .contain form menu.second .check:hover,
+section.login .contain form menu.second .check label:hover,
+section.login .contain form menu.second .check input:hover {
+    cursor: pointer;
+}
+
+section.login .contain form menu.second .check input {
+    width: fit-content;
+}
+
+section.login .contain a {
+    transition: var(--tran);
+    color: #333;
+    text-decoration: underline;
+}
+
+section.login .contain a:hover {
+    color: var(--orange);
+}
+
+@media (max-width:992px) {
+    section.login .contain {
+        gap: 40px;
+    }
+    section.login .contain .icon img {
+        width: 250px;
+    }
+    section.login .contain form {
+        gap: 40px;
+    }
+    section.login .contain form>h3 {
+        font-size: 22px;
+    }
+    section.login .contain form menu.first .in label span:first-child {
+        font-size: 17px;
+    }
+}
+
+@media (max-width:768px) {
+    section.login .contain {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 30px;
+    }
+    section.login .contain .icon img {
+        display: none;
+    }
+    section.login .contain form {
+        gap: 30px;
+    }
+    section.login .contain form>h3 {
+        font-size: 20px;
+    }
+    section.login .contain form menu.first .in label span:first-child {
+        font-size: 15px;
+    }
+}
+
+
+/*End Section Login*/
+
+
+/*End Login and Sign up Page*/
+
+
+/*Start Footer*/
+
+footer .contain {
+    padding-top: var(--padd100);
+    padding-bottom: var(--padd100);
+    background-color: var(--black);
+    color: var(--white);
+    gap: 30px;
+}
+
+footer .contain .contacts {
+    gap: 30px;
+}
+
+footer .contain .contacts a {
+    font-size: 30px;
+    transition: var(--tran);
+    padding: 10px;
+    color: var(--white);
+}
+
+footer .contain .contacts a:hover {
+    cursor: pointer;
+}
+
+footer .contain .contacts a:first-child:hover {
+    color: var(--facebook);
+}
+
+footer .contain .contacts a:nth-child(2):hover {
+    color: var(--youtube);
+}
+
+footer .contain .contacts a:nth-child(3):hover {
+    color: var(--instgram);
+}
+
+footer .contain .contacts a:nth-child(4):hover {
+    color: var(--google);
+}
+
+footer .contain h3 {
+    font-size: 25px;
+}
+
+footer .contain h3 i {
+    color: var(--youtube);
+}
+
+
+/*Login*/
+
+footer .contain.login {
+    padding-top: var(--padd50);
+    padding-bottom: var(--padd50);
+    text-align: center;
+}
+
+footer .contain.login h5 {
+    font-size: 16px;
+    gap: 2px;
+}
+
+footer .contain.login h5 a {
+    transition: var(--tran);
+    color: var(--white);
+    text-decoration: underline;
+}
+
+footer .contain.login h5 a:hover {
+    color: var(--orange);
+}
+
+@media (max-width:992px) {
+    footer .contain .contacts {
+        gap: 25px;
+    }
+    footer .contain .contacts i {
+        padding: 8px;
+        font-size: 25px;
+    }
+    footer .contain h3 {
+        font-size: 22px;
+    }
+    /*login*/
+    footer .contain.login h5 {
+        font-size: 15px;
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width:768px) {
+    footer .contain {
+        display: grid;
+        justify-content: center;
+        text-align: center;
+    }
+    footer .contain .contacts {
+        justify-content: center;
+        gap: 20px;
+    }
+    footer .contain .contacts i {
+        padding: 5px;
+        font-size: 20px;
+    }
+    footer .contain h3 {
+        font-size: 20px;
+    }
+    /*login*/
+    footer .contain.login h5 {
+        font-size: 12px;
+    }
+}
+
+
+/*End Footer*/

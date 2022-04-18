@@ -1,0 +1,269 @@
+/*Start Rules*/
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    --tran: ease-in-out all .3s;
+    --padd50: 50px;
+    --padd100: 100px;
+    --padd200: 200px;
+    --white: #fff;
+    --black: #333;
+    --orange: #fbb034;
+    --facebook: #1877f2;
+    --youtube: #ff0000;
+    --instgram: #f77737;
+    --google: #34a853;
+    --overColor: rgb(0, 0, 0, .4);
+    --box-shadow: 0 1px 10px rgb(31 31 31 / 12%), 0 1px 15px rgb(31 31 31 / 12%);
+    --fontw100: 100;
+    --fontw200: 200;
+    --fontw300: 300;
+    --fontw500: 500;
+    --fontw600: 600;
+    --fontw700: 700;
+    --fontw800: 800;
+    --fontw900: 900;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    background-color: var(--white);
+    font-family: 'Cairo', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+/*End Rules*/
+
+
+/*Start Framework*/
+
+.contain {
+    padding-left: 120px;
+    padding-right: 120px;
+}
+
+.scroll-header {
+    position: fixed !important;
+    width: 100%;
+    box-shadow: var(--box-shadow);
+    transition: var(--tran);
+    border-bottom-color: transparent !important;
+}
+
+.overlay {
+    position: absolute;
+    background-color: var(--overColor);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+input.btn,
+button.btn {
+    font-size: 18px;
+    transition: var(--tran);
+    text-transform: uppercase;
+    font-weight: var(--fontw700);
+    background-color: var(--orange);
+    color: var(--white);
+    letter-spacing: 1.7px;
+    border: 2px solid transparent;
+}
+
+button.btn.empty {
+    text-transform: capitalize;
+    font-weight: var(--fontw400);
+    background-color: transparent;
+    color: var(--black);
+    width: fit-content;
+    border: 2px solid var(--black);
+}
+
+button.btn.empty:hover {
+    border: 2px solid var(--orange);
+    color: var(--orange);
+}
+
+input.btn:hover,
+button.btn:hover {
+    cursor: pointer;
+    border: 2px solid var(--orange);
+    color: var(--orange);
+    background-color: transparent;
+}
+
+button,
+input {
+    outline: none;
+    border: none;
+    padding: 12px 50px;
+    font-size: 18px;
+    width: 100%;
+}
+
+.hide {
+    opacity: 0;
+    visibility: hidden;
+    z-index: -9999;
+    display: none !important;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+p {
+    line-height: 1.7;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    line-height: 1;
+}
+
+address {
+    font-style: normal;
+    gap: 20px;
+}
+
+address h2 {
+    font-size: 40px;
+    font-weight: var(--fontw700);
+    text-transform: capitalize;
+}
+
+address p {
+    font-size: 20px;
+    color: var(--black);
+}
+
+menu {
+    list-style: none;
+}
+
+.flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.flex-start {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.flex-end {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.flex-between {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.grid-center {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+
+.grid-start {
+    display: grid;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.grid-end {
+    display: grid;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.center {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.text-center {
+    text-align: center;
+}
+
+
+/*End Framework*/
+
+
+/*Start Responsive*/
+
+@media (max-width:1200px) {
+    .contain {
+        padding-left: 100px;
+        padding-right: 100px;
+    }
+}
+
+@media (max-width:992px) {
+    .contain {
+        padding-left: 80px;
+        padding-right: 80px;
+    }
+    button,
+    input,
+    button.btn,
+    input.btn {
+        padding: 10px 25px;
+        font-size: 16px;
+    }
+    address h2 {
+        font-size: 35px;
+    }
+    address p {
+        font-size: 18px;
+    }
+}
+
+@media (max-width:768px) {
+    .contain {
+        padding-left: 60px;
+        padding-right: 60px;
+    }
+    button,
+    input,
+    button.btn,
+    input.btn {
+        padding: 8px 22px;
+        font-size: 15px;
+    }
+    address h2 {
+        font-size: 30px;
+    }
+    address p {
+        font-size: 16px;
+    }
+}
+
+
+/*End Responsive*/

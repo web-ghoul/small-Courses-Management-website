@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--icon of page-->
+    <link rel="icon" href="../imgs/enigma2.png">
+    <!--Fonts-->
+    <link rel="stylesheet" href="../CSS/fontCairo.css">
+    <!--Styling-->
+    <link rel="stylesheet" href="../CSS/framework.css">
+    <link rel="stylesheet" href="../CSS/main.css">
+    <!--Icons-->
+    <link rel="stylesheet" href="../CSS/fontawesome.min.css">
+    <link rel="stylesheet" href="../CSS/all.min.css">
+    <!--Title of Page-->
+    <title>Sign Up - SP Project</title>
+</head>
+
+<body>
+    <main>
+        <div class="container">
+            <!--End Header-->
+            <header>
+                <div class="contain flex-center">
+                    <div class="logo flex-center">
+                        <div class="icon">
+                            <img src="../imgs/enigma.png" alt="Enigma image">
+                        </div>
+                        <span class="name">Enigma</span>
+                    </div>
+                </div>
+            </header>
+            <!--End Header-->
+
+            <!--Start Sign Up-->
+            <section class="login">
+                <div class="contain grid-center">
+                    <form action="POST" class="grid-center">
+                        <h3 class="flex-center">member sign up</h3>
+                        <menu class="grid-center first">
+                            <div class="in grid-center">
+                                <label for="" class="flex-between">
+                                    <span class="flex-start"><i class="fa-regular fa-user"></i> Username</span>
+                                </label>
+                                <input id="name" type="text" required placeholder="Username">
+                            </div>
+
+                            <div class="in grid-center">
+                                <label for="" class="flex-between">
+                                    <span class="flex-start"><i class="fa-regular fa-envelope"></i> Email</span>
+                                </label>
+                                <input id="email" type="email" required placeholder="Email">
+                            </div>
+
+                            <div class="in grid-center">
+                                <label for="" class="flex-between">
+                                    <span class="flex-start"><i class="fa-solid fa-square-phone"></i> Phone</span>
+                                </label>
+                                <input id="phone" type="text" placeholder="Phone">
+                            </div>
+
+                            <div class="in grid-center">
+                                <label for="" class="flex-between">
+                                    <span class="flex-start"><i class="fa-solid fa-chair"></i> Seat No.</span>
+                                </label>
+                                <input id="seat" type="text" required placeholder="Seat Number">
+                            </div>
+
+                            <div class="in grid-center">
+                                <label for="" class="flex-between">
+                                    <span  class="flex-start"><i class="fa-solid fa-lock"></i> Password</span>
+                                    <span  class="eye"><i class="fas fa-eye"></i> show</span>
+                                </label>
+                                <input id="pass" type="password" required placeholder="Password">
+                            </div>
+
+                            <div class="in grid-center">
+                                <label for="" class="flex-between">
+                                    <span  class="flex-start"><i class="fa-solid fa-lock"></i> Confirm Password</span>
+                                    <span  class="eye"><i class="fas fa-eye"></i> show</span>
+                                </label>
+                                <input id="conPass" type="password" required placeholder="Confirm Password">
+                            </div>
+                        </menu>
+
+                        <menu class="grid-center second">
+                            <div class="check flex-start">
+                                <input id="check" type="checkbox">
+                                <label for="check">keep me logged in</label>
+                            </div>
+                            <input id="signUpBtn" type="submit" value="Sign Up" class="center btn">
+                            <h5 class="text-center center">have aleardy an account? <a href="./login.html">Log in</a></h5>
+                        </menu>
+                    </form>
+                    <div class="icon flex-center">
+                        <img src="../imgs/enigma2.png" alt="">
+                    </div>
+                </div>
+            </section>
+            <!--End Sign Up-->
+
+            <!--Start Footer-->
+            <footer>
+                <div class="contain login flex-center">
+                    <h5 class="flex-center">© 1999 - 2022 enigma. All rights reserved. <a href="">Cookie policy</a>, <a href="">Privacy</a> and <a href="">Terms</a>.</h5>
+                </div>
+            </footer>
+            <!--End Footer-->
+        </div>
+    </main>
+
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script type="module" src="../JS/signup.js"></script>
+    <script type="module" src="../JS/framework.js"></script>
+</body>
+
+</html>
